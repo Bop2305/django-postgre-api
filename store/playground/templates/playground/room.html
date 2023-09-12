@@ -1,8 +1,23 @@
-{% extends "main.html" %}
-
-{% block content %}
+{% extends "main.html" %} {% block content %}
 
 <h1>Room</h1>
-<p>{{pk}}</p>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for room in rooms %}
+    <tr>
+      <td>{{room.id}}</td>
+      <td>{{room.name}}</td>
+      <td>{{room.description}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 {% endblock content %}
