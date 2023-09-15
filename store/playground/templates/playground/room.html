@@ -5,6 +5,8 @@
   <thead>
     <tr>
       <th>ID</th>
+      <th>Host</th>
+      <th>Topic</th>
       <th>Name</th>
       <th>Description</th>
     </tr>
@@ -13,6 +15,8 @@
     {% for room in rooms %}
     <tr>
       <td>{{room.id}}</td>
+      <td>{{room.host.username}}</td>
+      <td>{{room.topic.name}}</td>
       <td>{{room.name}}</td>
       <td>{{room.description}}</td>
     </tr>
